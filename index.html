@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEF - Alianza Estratégica Fredonia | Café de Especialidad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coffee: {
+                            50: '#faf7f0',
+                            100: '#f4ede0',
+                            200: '#e8d9c0',
+                            300: '#d9c097',
+                            400: '#c8a16c',
+                            500: '#b8864a',
+                            600: '#a0723c',
+                            700: '#855c32',
+                            800: '#6d4b2d',
+                            900: '#5a3f27',
+                        }
+                    },
+                    fontFamily: {
+                        'display': ['Georgia', 'serif'],
+                        'sans': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="navbar__container flex justify-between items-center">
+                <div class="navbar__brand">
+                    <h2 class="text-2xl font-bold text-coffee-800">
+                        <i class="fas fa-leaf text-coffee-600 mr-2"></i>AEF
+                    </h2>
+                    <p class="text-sm text-coffee-600 font-medium">Alianza Estratégica Fredonia</p>
+                </div>
+                
+                    <div class="navbar__menu hidden md:flex space-x-8">
+                        <a href="#inicio" class="navbar__link text-coffee-700 hover:text-coffee-500 font-medium transition-colors">Inicio</a>
+                        <a href="#productos" class="navbar__link text-coffee-700 hover:text-coffee-500 font-medium transition-colors">Productos</a>
+                        <a href="#proceso" class="navbar__link text-coffee-700 hover:text-coffee-500 font-medium transition-colors">Proceso</a>
+                        <a href="#regiones" class="navbar__link text-coffee-700 hover:text-coffee-500 font-medium transition-colors">Regiones</a>
+                        <a href="#impacto-social" class="navbar__link text-coffee-700 hover:text-coffee-500 font-medium transition-colors">Impacto Social</a>
+                        <a href="#contacto" class="navbar__link text-coffee-700 hover:text-coffee-500 font-medium transition-colors">Contacto</a>
+                    </div>
+                
+                <button class="navbar__toggle md:hidden text-coffee-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero min-h-screen flex items-center relative overflow-hidden">
+        <div class="hero__content container mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="hero__text">
+                    <h1 class="text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight">
+                        Café de <span class="text-coffee-200">Especialidad</span><br>
+                        desde las <span class="text-coffee-100">Montañas</span>
+                    </h1>
+                    <p class="text-xl text-coffee-50 mb-8 leading-relaxed">
+                        Descubre los sabores únicos de Antioquia. Desde Fredonia hasta Jardín, 
+                        cultivamos café con pasión y tradición familiar.
+                    </p>
+                    <div class="hero__actions flex flex-col sm:flex-row gap-4">
+                        <button class="btn bg-coffee-500 hover:bg-coffee-600 text-white px-8 py-4 rounded-full font-semibold text-lg">
+                            <i class="fas fa-coffee mr-2"></i>Explorar Cafés
+                        </button>
+                        <button class="btn border-2 border-white text-white hover:bg-white hover:text-coffee-700 px-8 py-4 rounded-full font-semibold text-lg">
+                            <i class="fas fa-play mr-2"></i>Ver Historia
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="hero__visual relative">
+                    <div class="relative z-10 bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+                        <div class="text-center">
+                            <i class="fas fa-mug-hot text-6xl text-coffee-200 mb-6"></i>
+                            <h3 class="text-2xl font-bold text-white mb-4">17°C - 23°C</h3>
+                            <p class="text-coffee-100 mb-6">Temperatura ideal de cultivo</p>
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <div class="bg-white/10 rounded-xl p-3">
+                                    <i class="fas fa-mountain text-coffee-200 mb-2"></i>
+                                    <p class="text-white text-sm">Altura Premium</p>
+                                </div>
+                                <div class="bg-white/10 rounded-xl p-3">
+                                    <i class="fas fa-award text-coffee-200 mb-2"></i>
+                                    <p class="text-white text-sm">Calidad Superior</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating coffee beans -->
+                    <div class="coffee-bean absolute -top-10 -right-10 text-coffee-200 opacity-20">
+                        <i class="fas fa-seedling text-3xl"></i>
+                    </div>
+                    <div class="coffee-bean absolute -bottom-10 -left-10 text-coffee-200 opacity-20">
+                        <i class="fas fa-leaf text-2xl"></i>
+                    </div>
+                    <div class="coffee-bean absolute top-1/2 -right-16 text-coffee-200 opacity-20">
+                        <i class="fas fa-coffee text-4xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="productos" class="section py-20 bg-gradient-to-b from-coffee-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-display font-bold text-coffee-800 mb-4">Nuestros Cafés Premium</h2>
+                <p class="text-xl text-coffee-600 max-w-2xl mx-auto">
+                    Cada variedad cuenta una historia única, desde la semilla hasta la taza perfecta
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Café Castilla -->
+                <div class="card bg-white rounded-2xl p-8 shadow-lg border border-coffee-100">
+                    <div class="card__header text-center mb-6">
+                        <div class="w-20 h-20 bg-coffee-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-mountain text-coffee-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-coffee-800 mb-2">Café Castilla</h3>
+                        <p class="text-coffee-600">Fortaleza y Sabor</p>
+                    </div>
+                    
+                    <div class="card__content">
+                        <div class="mb-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-coffee-700 font-medium">Acidez</span>
+                                <div class="flex space-x-1">
+                                    <div class="w-3 h-3 bg-coffee-500 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-coffee-500 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-coffee-500 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-coffee-200 rounded-full"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-coffee-700 font-medium">Dulzura</span>
+                                <div class="flex space-x-1">
+                                    <div class="w-3 h-3 bg-coffee-500 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-coffee-500 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-coffee-500 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-coffee-500 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-coffee-600 mb-6">
+                            Perfil afrutado con excelente equilibrio. Destaca en cataciones por su limpieza en taza.
+                        </p>
+                        <button class="btn w-full bg-coffee-600 hover:bg-coffee-700 text-white py-3 rounded-xl font-semibold">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Proceso Lavado -->
+                <div class="card bg-gradient-to-br from-coffee-600 to-coffee-700 rounded-2xl p-8 shadow-lg text-white">
+                    <div class="card__header text-center mb-6">
+                        <div class="w-20 h-20 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tint text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Proceso Lavado</h3>
+                        <p class="text-coffee-100">Método Clásico</p>
+                    </div>
+                    
+                    <div class="card__content">
+                        <p class="text-coffee-50 mb-6">
+                            El proceso más refinado que garantiza limpieza y precisión en cada taza. 
+                            Ideal para cafés de especialidad.
+                        </p>
+                        <div class="flex items-center justify-center space-x-4 mb-6">
+                            <div class="text-center">
+                                <i class="fas fa-star text-yellow-300 text-xl mb-2"></i>
+                                <p class="text-coffee-100 text-sm">Premium</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-certificate text-yellow-300 text-xl mb-2"></i>
+                                <p class="text-coffee-100 text-sm">Calidad</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-heart text-red-300 text-xl mb-2"></i>
+                                <p class="text-coffee-100 text-sm">Tradición</p>
+                            </div>
+                        </div>
+                        <button class="btn w-full bg-white hover:bg-coffee-50 text-coffee-700 py-3 rounded-xl font-semibold">
+                            Conocer Proceso
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Regiones -->
+                <div class="card bg-white rounded-2xl p-8 shadow-lg border border-coffee-100 lg:col-span-1 md:col-span-2 lg:col-span-1">
+                    <div class="card__header text-center mb-6">
+                        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-map-marker-alt text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-coffee-800 mb-2">Nuestras Regiones</h3>
+                        <p class="text-coffee-600">Territorio Cafetero</p>
+                    </div>
+                    
+                    <div class="card__content">
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-map-pin text-coffee-500 mr-3"></i>
+                                <span class="text-coffee-700">Fredonia</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-pin text-coffee-500 mr-3"></i>
+                                <span class="text-coffee-700">Jardín</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-pin text-coffee-500 mr-3"></i>
+                                <span class="text-coffee-700">Támesis</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-pin text-coffee-500 mr-3"></i>
+                                <span class="text-coffee-700">Jericó</span>
+                            </div>
+                        </div>
+                        <button class="btn w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold">
+                            <i class="fas fa-route mr-2"></i>Explorar Origen
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="proceso" class="section py-20 bg-coffee-800 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-display font-bold mb-4">Del Grano a la Taza</h2>
+                <p class="text-xl text-coffee-200 max-w-2xl mx-auto">
+                    Cada paso de nuestro proceso está diseñado para preservar y realzar los sabores únicos
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="process-step text-center">
+                    <div class="w-20 h-20 bg-coffee-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-seedling text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Cultivo</h3>
+                    <p class="text-coffee-200">Selección cuidadosa de semillas y cultivo en condiciones ideales</p>
+                </div>
+                
+                <div class="process-step text-center">
+                    <div class="w-20 h-20 bg-coffee-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hand-paper text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Recolección</h3>
+                    <p class="text-coffee-200">Cosecha manual en el punto perfecto de maduración</p>
+                </div>
+                
+                <div class="process-step text-center">
+                    <div class="w-20 h-20 bg-coffee-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tint text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Procesamiento</h3>
+                    <p class="text-coffee-200">Método lavado para obtener máxima limpieza y calidad</p>
+                </div>
+                
+                <div class="process-step text-center">
+                    <div class="w-20 h-20 bg-coffee-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-coffee text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Tostado</h3>
+                    <p class="text-coffee-200">Tostado artesanal que resalta los perfiles únicos de cada región</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regions Section -->
+    <section id="regiones" class="section py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-display font-bold text-coffee-800 mb-4">Territorio Cafetero</h2>
+                <p class="text-xl text-coffee-600 max-w-2xl mx-auto">
+                    Conoce las regiones que dan vida a nuestros cafés excepcionales
+                </p>
+            </div>
+            
+            <div class="bg-gradient-to-r from-coffee-100 to-coffee-50 rounded-3xl p-8 lg:p-12">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-3xl font-display font-bold text-coffee-800 mb-6">
+                            Antioquia: Corazón Cafetero
+                        </h3>
+                        <p class="text-coffee-700 text-lg mb-6 leading-relaxed">
+                            Nuestros cafés nacen en las montañas de Antioquia, donde la tradición 
+                            familiar se combina con técnicas modernas de cultivo. Cada región aporta 
+                            características únicas a nuestros granos.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="bg-white rounded-xl p-4 shadow-sm">
+                                <h4 class="font-bold text-coffee-800 mb-2">
+                                    <i class="fas fa-thermometer-half text-coffee-500 mr-2"></i>
+                                    Clima
+                                </h4>
+                                <p class="text-coffee-600">17°C - 23°C</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4 shadow-sm">
+                                <h4 class="font-bold text-coffee-800 mb-2">
+                                    <i class="fas fa-mountain text-coffee-500 mr-2"></i>
+                                    Altitud
+                                </h4>
+                                <p class="text-coffee-600">1.200 - 1.800 msnm</p>
+                            </div>
+                        </div>
+                        
+                        <button class="btn bg-coffee-600 hover:bg-coffee-700 text-white px-8 py-4 rounded-xl font-semibold">
+                            <i class="fas fa-map mr-2"></i>Ver Mapa Interactivo
+                        </button>
+                    </div>
+                    
+                    <div class="relative">
+                        <div class="bg-white rounded-2xl p-6 shadow-lg">
+                            <h4 class="text-xl font-bold text-coffee-800 mb-4 text-center">Nuestras Ubicaciones</h4>
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between p-3 bg-coffee-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-3 h-3 bg-coffee-500 rounded-full mr-3"></div>
+                                        <span class="font-medium text-coffee-800">Fredonia</span>
+                                    </div>
+                                    <span class="text-coffee-600 text-sm">Base principal</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-coffee-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                                        <span class="font-medium text-coffee-800">Jardín</span>
+                                    </div>
+                                    <span class="text-coffee-600 text-sm">Finca asociada</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-coffee-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+                                        <span class="font-medium text-coffee-800">Támesis</span>
+                                    </div>
+                                    <span class="text-coffee-600 text-sm">Cultivo especial</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-coffee-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-3 h-3 bg-yellow-500 rounded-full mr-3"></div>
+                                        <span class="font-medium text-coffee-800">Jericó</span>
+                                    </div>
+                                    <span class="text-coffee-600 text-sm">Tradición familiar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Impact Section -->
+    <section id="impacto-social" class="section py-20 bg-gradient-to-br from-green-50 via-coffee-50 to-green-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-display font-bold text-coffee-800 mb-4">Impacto Social en el Campo</h2>
+                <p class="text-xl text-coffee-600 max-w-3xl mx-auto">
+                    Más que café, cultivamos oportunidades. Nuestro compromiso trasciende la producción 
+                    para generar desarrollo sostenible en las comunidades rurales de Antioquia.
+                </p>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="grid md:grid-cols-4 gap-8 mb-16">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-coffee-800 mb-2">50+</h3>
+                    <p class="text-coffee-600">Familias Beneficiadas</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-coffee-800 mb-2">120</h3>
+                    <p class="text-coffee-600">Capacitaciones Realizadas</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-seedling text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-coffee-800 mb-2">200</h3>
+                    <p class="text-coffee-600">Hectáreas Sostenibles</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-coffee-800 mb-2">5</h3>
+                    <p class="text-coffee-600">Años de Compromiso</p>
+                </div>
+            </div>
+
+            <!-- Programs Grid -->
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                <!-- Education Program -->
+                <div class="card bg-white rounded-2xl p-8 shadow-lg border border-green-100 hover:shadow-2xl">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-chalkboard-teacher text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-coffee-800 mb-2">Educación Rural</h3>
+                        <p class="text-green-600 font-medium">Formación Continua</p>
+                    </div>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-coffee-700">Técnicas modernas de cultivo</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-coffee-700">Gestión financiera para productores</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-coffee-700">Certificaciones de calidad</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-coffee-700">Uso de tecnología agrícola</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-green-50 rounded-lg p-4 mb-6">
+                        <p class="text-sm text-green-700 font-medium">Próxima Capacitación</p>
+                        <p class="text-coffee-800 font-semibold">Control de Plagas Orgánico</p>
+                        <p class="text-coffee-600 text-sm">15 de Septiembre, 2025</p>
+                    </div>
+                    
+                    <button class="btn w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold">
+                        Ver Programas
+                    </button>
+                </div>
+
+                <!-- Economic Support -->
+                <div class="card bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-8 shadow-lg text-white">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-handshake text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Apoyo Económico</h3>
+                        <p class="text-blue-100 font-medium">Comercio Justo</p>
+                    </div>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="bg-white/10 rounded-lg p-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-blue-100">Precio Premium</span>
+                                <span class="font-bold text-white">+25%</span>
+                            </div>
+                            <div class="w-full bg-white/20 rounded-full h-2">
+                                <div class="bg-white h-2 rounded-full w-3/4"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <i class="fas fa-dollar-sign text-blue-200 mr-3"></i>
+                                <span class="text-blue-50">Pago anticipado disponible</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-calculator text-blue-200 mr-3"></i>
+                                <span class="text-blue-50">Microcréditos sin interés</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-piggy-bank text-blue-200 mr-3"></i>
+                                <span class="text-blue-50">Programa de ahorro grupal</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/10 rounded-lg p-4 mb-6">
+                        <p class="text-blue-100 text-sm mb-1">Impacto Económico 2024</p>
+                        <p class="text-2xl font-bold text-white">$450M COP</p>
+                        <p class="text-blue-200 text-sm">Invertidos en la comunidad</p>
+                    </div>
+                    
+                    <button class="btn w-full bg-white hover:bg-blue-50 text-blue-700 py-3 rounded-xl font-semibold">
+                        Conocer Beneficios
+                    </button>
+                </div>
+
+                <!-- Environmental Care -->
+                <div class="card bg-white rounded-2xl p-8 shadow-lg border border-green-100">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-leaf text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-coffee-800 mb-2">Cuidado Ambiental</h3>
+                        <p class="text-emerald-600 font-medium">Sostenibilidad</p>
+                    </div>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-center justify-between p-3 bg-emerald-50 rounded-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-tree text-emerald-500 mr-3"></i>
+                                <span class="text-coffee-700 font-medium">Árboles Plantados</span>
+                            </div>
+                            <span class="text-emerald-600 font-bold">2,500+</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-tint text-blue-500 mr-3"></i>
+                                <span class="text-coffee-700 font-medium">Agua Conservada</span>
+                            </div>
+                            <span class="text-blue-600 font-bold">40%</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-3 bg-yellow-50 rounded-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-recycle text-yellow-500 mr-3"></i>
+                                <span class="text-coffee-700 font-medium">Residuos Reciclados</span>
+                            </div>
+                            <span class="text-yellow-600 font-bold">85%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-emerald-50 rounded-lg p-4 mb-6">
+                        <h4 class="font-bold text-emerald-800 mb-2">Proyecto Actual</h4>
+                        <p class="text-coffee-700 text-sm mb-2">Reforestación de cuencas hídricas</p>
+                        <div class="flex items-center">
+                            <div class="w-full bg-emerald-200 rounded-full h-2 mr-3">
+                                <div class="bg-emerald-500 h-2 rounded-full w-2/3"></div>
+                            </div>
+                            <span class="text-emerald-600 text-sm font-bold">67%</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl font-semibold">
+                        Ver Proyectos
+                    </button>
+                </div>
+            </div>
+
+            <!-- Community Stories -->
+            <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-lg">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-display font-bold text-coffee-800 mb-4">Historias de Nuestra Comunidad</h3>
+                    <p class="text-coffee-600 text-lg max-w-2xl mx-auto">
+                        Cada productor tiene una historia que contar. Conoce cómo nuestra alianza 
+                        ha transformado vidas en el campo antioqueño.
+                    </p>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="mb-8">
+                            <div class="flex items-center mb-4">
+                                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'><circle cx='30' cy='30' r='30' fill='%23c8a16c'/><text x='30' y='38' font-family='Arial' font-size='24' font-weight='bold' text-anchor='middle' fill='white'>MA</text></svg>" 
+                                     alt="María Amparo" 
+                                     class="w-15 h-15 rounded-full mr-4">
+                                <div>
+                                    <h4 class="text-xl font-bold text-coffee-800">María Amparo Giraldo</h4>
+                                    <p class="text-coffee-600">Productora - Jardín, Antioquia</p>
+                                </div>
+                            </div>
+                            <blockquote class="text-coffee-700 text-lg italic mb-4 pl-4 border-l-4 border-coffee-300">
+                                "Gracias a AEF, mi finca no solo produce mejor café, sino que mis hijos 
+                                pueden estudiar. Las capacitaciones nos han enseñado a ser más eficientes 
+                                y el precio justo nos da estabilidad económica."
+                            </blockquote>
+                            <div class="flex items-center text-coffee-600">
+                                <i class="fas fa-quote-left text-coffee-400 mr-2"></i>
+                                <span class="text-sm">Testimonio real - Agosto 2024</span>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="text-center p-4 bg-coffee-50 rounded-lg">
+                                <i class="fas fa-home text-coffee-600 text-xl mb-2"></i>
+                                <p class="text-coffee-700 font-semibold">8 años</p>
+                                <p class="text-coffee-600 text-sm">Con AEF</p>
+                            </div>
+                            <div class="text-center p-4 bg-green-50 rounded-lg">
+                                <i class="fas fa-chart-line text-green-600 text-xl mb-2"></i>
+                                <p class="text-green-700 font-semibold">+60%</p>
+                                <p class="text-green-600 text-sm">Ingresos</p>
+                            </div>
+                            <div class="text-center p-4 bg-blue-50 rounded-lg">
+                                <i class="fas fa-users text-blue-600 text-xl mb-2"></i>
+                                <p class="text-blue-700 font-semibold">4</p>
+                                <p class="text-blue-600 text-sm">Empleos</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-coffee-100 to-coffee-200 rounded-2xl p-8">
+                            <h4 class="text-2xl font-bold text-coffee-800 mb-6 text-center">Nuestros Compromisos</h4>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-coffee-800 mb-1">Precio Justo Garantizado</h5>
+                                        <p class="text-coffee-600 text-sm">Pagamos 25% por encima del precio del mercado</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-coffee-800 mb-1">Capacitación Continua</h5>
+                                        <p class="text-coffee-600 text-sm">Programas mensuales de formación técnica</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-coffee-800 mb-1">Apoyo Familiar</h5>
+                                        <p class="text-coffee-600 text-sm">Becas educativas para hijos de productores</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-coffee-800 mb-1">Sostenibilidad Ambiental</h5>
+                                        <p class="text-coffee-600 text-sm">Proyectos de conservación y reforestación</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 text-center">
+                                <button class="btn bg-coffee-600 hover:bg-coffee-700 text-white px-6 py-3 rounded-xl font-semibold">
+                                    <i class="fas fa-users mr-2"></i>Únete a Nuestra Comunidad
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-16">
+                <div class="bg-gradient-to-r from-coffee-600 to-coffee-700 rounded-3xl p-8 lg:p-12 text-white">
+                    <h3 class="text-3xl font-display font-bold mb-4">¿Eres Productor de Café?</h3>
+                    <p class="text-xl text-coffee-100 mb-8 max-w-2xl mx-auto">
+                        Únete a nuestra alianza y forma parte de una comunidad que valora tu trabajo, 
+                        tu familia y tu tierra. Juntos construimos un futuro sostenible.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button class="btn bg-white hover:bg-coffee-50 text-coffee-700 px-8 py-4 rounded-full font-semibold text-lg">
+                            <i class="fas fa-phone mr-2"></i>Contactar Ahora
+                        </button>
+                        <button class="btn border-2 border-white text-white hover:bg-white hover:text-coffee-700 px-8 py-4 rounded-full font-semibold text-lg">
+                            <i class="fas fa-download mr-2"></i>Descargar Información
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section py-20 bg-gradient-to-b from-coffee-800 to-coffee-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-display font-bold mb-4">Conecta con Nosotros</h2>
+                <p class="text-xl text-coffee-200 max-w-2xl mx-auto">
+                    Estamos aquí para compartir nuestra pasión por el café contigo
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Información de Contacto</h3>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-coffee-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-coffee-200 text-sm">Email</p>
+                                <p class="font-semibold">alianzaestrategicafredonia@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-coffee-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-coffee-200 text-sm">Teléfono</p>
+                                <p class="font-semibold">+57 302 336 4577</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-coffee-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-coffee-200 text-sm">Ubicación</p>
+                                <p class="font-semibold">La Estrella, Antioquia - Colombia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-coffee-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <p class="text-coffee-200 text-sm">Director</p>
+                                <p class="font-semibold">Carlos Mario Meijer</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <button class="btn bg-green-600 hover:bg-green-700 text-white p-3 rounded-full">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </button>
+                        <button class="btn bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </button>
+                        <button class="btn bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </button>
+                        <button class="btn bg-red-600 hover:bg-red-700 text-white p-3 rounded-full">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
+                        <h3 class="text-2xl font-bold mb-6">Envíanos un Mensaje</h3>
+                        
+                        <form class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-coffee-200 text-sm mb-2">Nombre</label>
+                                    <input type="text" 
+                                           class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-coffee-200 focus:outline-none focus:border-coffee-400 transition-colors"
+                                           placeholder="Tu nombre completo">
+                                </div>
+                                <div>
+                                    <label class="block text-coffee-200 text-sm mb-2">Teléfono</label>
+                                    <input type="tel" 
+                                           class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-coffee-200 focus:outline-none focus:border-coffee-400 transition-colors"
+                                           placeholder="Tu número de teléfono">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-coffee-200 text-sm mb-2">Email</label>
+                                <input type="email" 
+                                       class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-coffee-200 focus:outline-none focus:border-coffee-400 transition-colors"
+                                       placeholder="tu@email.com">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-coffee-200 text-sm mb-2">Tipo de Consulta</label>
+                                <select class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-coffee-400 transition-colors">
+                                    <option value="" class="text-coffee-800">Selecciona una opción</option>
+                                    <option value="productos" class="text-coffee-800">Información de productos</option>
+                                    <option value="mayorista" class="text-coffee-800">Ventas al por mayor</option>
+                                    <option value="visita" class="text-coffee-800">Visita a finca</option>
+                                    <option value="alianza" class="text-coffee-800">Alianzas estratégicas</option>
+                                    <option value="otro" class="text-coffee-800">Otro</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-coffee-200 text-sm mb-2">Mensaje</label>
+                                <textarea rows="4" 
+                                          class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-coffee-200 focus:outline-none focus:border-coffee-400 transition-colors resize-none"
+                                          placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                            </div>
+                            
+                            <button type="submit" 
+                                    class="btn w-full bg-coffee-500 hover:bg-coffee-600 text-white py-4 rounded-xl font-semibold text-lg">
+                                <i class="fas fa-paper-plane mr-2"></i>Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-coffee-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-8 mb-8">
+                <div class="lg:col-span-2">
+                    <div class="footer__brand mb-6">
+                        <h3 class="text-3xl font-bold mb-2">
+                            <i class="fas fa-leaf text-coffee-400 mr-2"></i>AEF
+                        </h3>
+                        <p class="text-coffee-300 mb-4">Alianza Estratégica Fredonia</p>
+                        <p class="text-coffee-200 leading-relaxed max-w-md">
+                            Más que café, somos una familia que cultiva tradición, calidad y 
+                            sostenibilidad en cada grano que producimos.
+                        </p>
+                    </div>
+                    
+                    <div class="footer__newsletter">
+                        <h4 class="text-xl font-bold mb-3">Newsletter</h4>
+                        <p class="text-coffee-300 mb-4">Recibe noticias sobre nuestros cafés y cosechas</p>
+                        <div class="flex">
+                            <input type="email" 
+                                   placeholder="tu@email.com" 
+                                   class="flex-1 bg-coffee-800 border border-coffee-700 rounded-l-xl px-4 py-3 text-white placeholder-coffee-400 focus:outline-none focus:border-coffee-500">
+                            <button class="btn bg-coffee-500 hover:bg-coffee-600 px-6 py-3 rounded-r-xl">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Enlaces Rápidos</h4>
+                    <nav class="footer__nav space-y-2">
+                        <a href="#productos" class="block text-coffee-300 hover:text-white transition-colors">Nuestros Cafés</a>
+                        <a href="#proceso" class="block text-coffee-300 hover:text-white transition-colors">Proceso</a>
+                        <a href="#regiones" class="block text-coffee-300 hover:text-white transition-colors">Regiones</a>
+                        <a href="#impacto-social" class="block text-coffee-300 hover:text-white transition-colors">Impacto Social</a>
+                        <a href="#contacto" class="block text-coffee-300 hover:text-white transition-colors">Contacto</a>
+                        <a href="#" class="block text-coffee-300 hover:text-white transition-colors">Blog</a>
+                        <a href="#" class="block text-coffee-300 hover:text-white transition-colors">Tienda</a>
+                    </nav>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Certificaciones</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fas fa-certificate text-green-400 mr-3"></i>
+                            <span class="text-coffee-300">Café Orgánico</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-leaf text-green-400 mr-3"></i>
+                            <span class="text-coffee-300">Comercio Justo</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-mountain text-green-400 mr-3"></i>
+                            <span class="text-coffee-300">Origen Único</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-award text-yellow-400 mr-3"></i>
+                            <span class="text-coffee-300">Calidad Premium</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom border-t border-coffee-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="footer__copy mb-4 md:mb-0">
+                        <p class="text-coffee-400">
+                            &copy; 2025 Alianza Estratégica Fredonia. Todos los derechos reservados.
+                        </p>
+                    </div>
+                    
+                    <div class="footer__social flex space-x-4">
+                        <a href="#" class="text-coffee-400 hover:text-white transition-colors">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                        <a href="#" class="text-coffee-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-coffee-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-coffee-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="text-coffee-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="fixed bottom-6 right-6 w-12 h-12 bg-coffee-600 hover:bg-coffee-700 text-white rounded-full shadow-lg transition-all duration-300 opacity-0 invisible z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="./js/script.js"></script>
+     
+    </script>
+</body>
+</html>
