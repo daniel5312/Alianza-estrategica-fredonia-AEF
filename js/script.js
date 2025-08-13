@@ -42,31 +42,29 @@
             menu.classList.toggle('hidden');
         });
 
-        // Form submission handling
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Simple form validation
-            const inputs = this.querySelectorAll('input[required], textarea[required], select[required]');
-            let isValid = true;
-            
-            inputs.forEach(input => {
-                if (!input.value.trim()) {
-                    isValid = false;
-                    input.classList.add('border-red-400');
-                } else {
-                    input.classList.remove('border-red-400');
-                }
-            });
-            
-            if (isValid) {
-                // Show success message (in a real app, this would send the data)
-                alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
-                this.reset();
-            } else {
-                alert('Por favor, completa todos los campos requeridos.');
-            }
-        });
+       document.querySelector('form').addEventListener('submit', function(e) {
+    // Evitar envío automático para validar
+    e.preventDefault();
+
+    const inputs = this.querySelectorAll('input[required], textarea[required], select[required]');
+    let isValid = true;
+
+    inputs.forEach(input => {
+        if (!input.value.trim()) {
+            isValid = false;
+            input.classList.add('border-red-400');
+        } else {
+            input.classList.remove('border-red-400');
+        }
+    });
+
+    if (isValid) {
+        // Si es válido, enviar realmente el formulario
+        this.submit();
+    } else {
+        alert('Por favor, completa todos los campos requeridos.');
+    }
+});
 
         // Intersection Observer for animations
         const observerOptions = {
