@@ -1,5 +1,17 @@
  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
+        :root{
+            --primary: #10b981;
+            --primary-dark: #059669;
+            --secondary: #6366f1;
+            --accent: #f59e0b;
+            --dark: #0f172a;
+            --dark-light: #1e293b;
+            --gray: #64748b;
+            --gray-light: #f1f5f9;
+            --success: #22c55e;
+            --white: #ffffff;
+        }
+            
         /* BEM Methodology Styles */
         .hero {
             background: linear-gradient(135deg, rgba(133, 92, 50, 0.9) 0%, rgba(109, 75, 45, 0.9) 100%), 
@@ -90,6 +102,67 @@
         .process-step:last-child::after {
             display: none;
         }
+        /* ODS Grid */
+        .ods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        /* Section Styling */
+        .section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        .ods-item {
+            background: white;
+            padding: 2rem 1rem;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ods-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+
+        .ods-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .ods-item:hover::before {
+            transform: scaleX(1);
+        }
+
         
         @media (max-width: 768px) {
             .process-step::after {
